@@ -46,6 +46,7 @@
 - (void)loadNewsDataFromServer{
     NSNumber* offset = self.offSet == INVALID_OFFSET ? nil : [NSNumber numberWithInt: self.offSet];
     
+    //[self.view hideToastActivity];
     [self.view makeToastActivity];
     self.isLoadingNextPage = YES;
     
@@ -62,11 +63,15 @@
             News* news = [News convertFromNewsDictionaryToNewsObject: newsDict];
             [self.newsArray addObject: news];
         }
-        self.offSet = (int)[(NSString*)[responseObject objectForKey:@"offset"] integerValue];
         [self.tableView reloadData];
-                                               
-        if (newsDicts.count == 0) {
+
+        int newOffset = (int)[(NSString*)[responseObject objectForKey:@"offset"] integerValue];
+        self.offSet = newOffset == INVALID_OFFSET ? self.offSet : newOffset;
+        
+        if (newsDicts.count == 0 && self.offSet == INVALID_OFFSET) {
             [self.view makeToast:@"There isn't any news from this category yet. Please try again later" duration:5 position:@"bottom"];
+        } else if (newsDicts.count == 0 && self.offSet != INVALID_OFFSET){
+            [self.view makeToast:@"No more news in this category. Please try again later" duration:5 position:@"bottom"];
         }
         
     } failure:^(NSInteger statusCode, NSError *error) {
@@ -76,22 +81,6 @@
         
         [self.view makeToast:@"Oops.. please check your network" duration:5 position:@"bottom"];
     }];
-    
-    // Test
-    /*
-    NSDictionary* newsDict = @{
-                           @"title": @"Corgi1",
-                           @"text": @"Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.",
-                           @"category": @"Pets",
-                           @"time": @"Yesterday 10:30am",
-                           @"images": @[@"http://thewithouse.com/wp-content/uploads/2013/11/corgi-3.jpg",
-                                        @"http://stuffpoint.com/dogs/image/208632-dogs-adorable-corgi-puppies-running-ddddd.jpg",
-                                        @"https://poolhouse.s3.amazonaws.com/blog-assets-two/2014/08/corgicute.jpg"]
-                           };
-    News* news = [News convertFromNewsDictionaryToNewsObject:newsDict];
-    [self.newsArray addObject: news];
-    [self.tableView reloadData];
-     */
 }
 
 #pragma mark - Table view data source
@@ -116,9 +105,9 @@
     cell.sourceLabel.text = news.time;
     
     if (news.imageURLs.count > 0) {
-        [cell.thumbImage sd_setImageWithURL:[NSURL URLWithString:[news.imageURLs objectAtIndex:0]] placeholderImage:nil];
+        [cell.thumbImage sd_setImageWithURL:[NSURL URLWithString:[news.imageURLs objectAtIndex:0]] placeholderImage:[UIImage imageNamed:@"placeholder.jpg"]];
     } else{
-        cell.thumbImage.image = nil;
+        cell.thumbImage.image = [UIImage imageNamed:@"placeholder.jpg"];
     }
     
     return cell;

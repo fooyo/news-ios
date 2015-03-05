@@ -47,6 +47,9 @@
                                                 frame.origin.y,
                                                 [self getScreenWidth],
                                                 frame.size.height);
+    if (self.news.imageURLs.count == 0) {
+        self.news.imageURLs = @[@"http://www.aviatorcameragear.com/wp-content/uploads/2012/07/placeholder_2.jpg"];
+    }
     
     for (int i = 0; i < [self.news.imageURLs count]; i++) {
         frame.origin.x = self.slideShowScrollView.frame.size.width * i;
@@ -59,7 +62,7 @@
         subview1.contentMode = UIViewContentModeScaleAspectFill;
         NSURL* url = [NSURL URLWithString:[self.news.imageURLs objectAtIndex: i]];
         [subview1 sd_setImageWithURL:url
-                    placeholderImage:nil];
+                    placeholderImage:[UIImage imageNamed:@"placeholder.jpg"]];
         
         [self.slideShowScrollView addSubview:subview1];
     }

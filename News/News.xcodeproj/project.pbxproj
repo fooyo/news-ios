@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		494CEAB11AA8CEA200AD4E1A /* CategoryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 494CEAB01AA8CEA200AD4E1A /* CategoryButton.m */; };
+		499565AB1AA90F6A004B9FBD /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 499565AA1AA90F6A004B9FBD /* placeholder.jpg */; };
 		49AD4B101AA8DC0A00E929C4 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AD4B0F1AA8DC0A00E929C4 /* NewsDetailViewController.m */; };
 		49AD4B161AA8F65300E929C4 /* UIColor+ColorFromRGB.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AD4B151AA8F65300E929C4 /* UIColor+ColorFromRGB.m */; };
 		49C3590C1AA892E50064DDB0 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C3590B1AA892E50064DDB0 /* News.m */; };
@@ -41,6 +42,7 @@
 		1B14694B55610B1D626AD062 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		494CEAAF1AA8CEA200AD4E1A /* CategoryButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryButton.h; sourceTree = "<group>"; };
 		494CEAB01AA8CEA200AD4E1A /* CategoryButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryButton.m; sourceTree = "<group>"; };
+		499565AA1AA90F6A004B9FBD /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
 		49AD4B0F1AA8DC0A00E929C4 /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
 		49AD4B141AA8F65300E929C4 /* UIColor+ColorFromRGB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorFromRGB.h"; sourceTree = "<group>"; };
 		49AD4B151AA8F65300E929C4 /* UIColor+ColorFromRGB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorFromRGB.m"; sourceTree = "<group>"; };
@@ -96,6 +98,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		499565A91AA90F3B004B9FBD /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				499565AA1AA90F6A004B9FBD /* placeholder.jpg */,
+				49AD4B141AA8F65300E929C4 /* UIColor+ColorFromRGB.h */,
+				49AD4B151AA8F65300E929C4 /* UIColor+ColorFromRGB.m */,
+				49C359231AA8BE800064DDB0 /* UIViewController+ScreenSize.h */,
+				49C359241AA8BE800064DDB0 /* UIViewController+ScreenSize.m */,
+				49C359221AA8BD510064DDB0 /* SwitchedToPageOfIndexDelegate.h */,
+			);
+			name = Miscellaneous;
+			sourceTree = "<group>";
+		};
 		49C359081AA892BD0064DDB0 /* Modals */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,11 +191,7 @@
 		CF86A4F71AA83DF000E1BB51 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				49AD4B141AA8F65300E929C4 /* UIColor+ColorFromRGB.h */,
-				49AD4B151AA8F65300E929C4 /* UIColor+ColorFromRGB.m */,
-				49C359231AA8BE800064DDB0 /* UIViewController+ScreenSize.h */,
-				49C359241AA8BE800064DDB0 /* UIViewController+ScreenSize.m */,
-				49C359221AA8BD510064DDB0 /* SwitchedToPageOfIndexDelegate.h */,
+				499565A91AA90F3B004B9FBD /* Miscellaneous */,
 				49C3590E1AA893570064DDB0 /* HTTPClient */,
 				49C3590D1AA892F80064DDB0 /* Views */,
 				49C359081AA892BD0064DDB0 /* Modals */,
@@ -311,6 +322,7 @@
 			files = (
 				CF86A5041AA83DF000E1BB51 /* Main.storyboard in Resources */,
 				CF86A5091AA83DF000E1BB51 /* LaunchScreen.xib in Resources */,
+				499565AB1AA90F6A004B9FBD /* placeholder.jpg in Resources */,
 				CFCE541D1AA86BC6005A419A /* NewsCell.xib in Resources */,
 				CF86A5061AA83DF000E1BB51 /* Images.xcassets in Resources */,
 			);
