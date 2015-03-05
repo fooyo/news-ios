@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49C3590C1AA892E50064DDB0 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C3590B1AA892E50064DDB0 /* News.m */; };
+		49C359171AA893B70064DDB0 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C359141AA893B70064DDB0 /* HttpClient.m */; };
+		49C359181AA893B70064DDB0 /* HTTPRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C359161AA893B70064DDB0 /* HTTPRequestManager.m */; };
+		49C359211AA8BC9F0064DDB0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C359201AA8BC9F0064DDB0 /* RootViewController.m */; };
+		49C359251AA8BE800064DDB0 /* UIViewController+ScreenSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C359241AA8BE800064DDB0 /* UIViewController+ScreenSize.m */; };
 		77CF6BA4A98846AA6701A50D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65131BC581644C02EB7B34B4 /* libPods.a */; };
 		CF86A4FB1AA83DF000E1BB51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF86A4FA1AA83DF000E1BB51 /* main.m */; };
 		CF86A4FE1AA83DF000E1BB51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF86A4FD1AA83DF000E1BB51 /* AppDelegate.m */; };
@@ -32,6 +37,18 @@
 
 /* Begin PBXFileReference section */
 		1B14694B55610B1D626AD062 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		49C3590A1AA892E50064DDB0 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		49C3590B1AA892E50064DDB0 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		49C359121AA893B70064DDB0 /* HttpRequestConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequestConsts.h; sourceTree = "<group>"; };
+		49C359131AA893B70064DDB0 /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
+		49C359141AA893B70064DDB0 /* HttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
+		49C359151AA893B70064DDB0 /* HTTPRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequestManager.h; sourceTree = "<group>"; };
+		49C359161AA893B70064DDB0 /* HTTPRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequestManager.m; sourceTree = "<group>"; };
+		49C3591F1AA8BC9F0064DDB0 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		49C359201AA8BC9F0064DDB0 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		49C359221AA8BD510064DDB0 /* SwitchedToPageOfIndexDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwitchedToPageOfIndexDelegate.h; sourceTree = "<group>"; };
+		49C359231AA8BE800064DDB0 /* UIViewController+ScreenSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ScreenSize.h"; sourceTree = "<group>"; };
+		49C359241AA8BE800064DDB0 /* UIViewController+ScreenSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ScreenSize.m"; sourceTree = "<group>"; };
 		65131BC581644C02EB7B34B4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF86A4F51AA83DF000E1BB51 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF86A4F91AA83DF000E1BB51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +90,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49C359081AA892BD0064DDB0 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				49C3590A1AA892E50064DDB0 /* News.h */,
+				49C3590B1AA892E50064DDB0 /* News.m */,
+			);
+			name = Modals;
+			sourceTree = "<group>";
+		};
+		49C359091AA892C60064DDB0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				49C3591F1AA8BC9F0064DDB0 /* RootViewController.h */,
+				49C359201AA8BC9F0064DDB0 /* RootViewController.m */,
+				CFCE54241AA87016005A419A /* NewsTableViewController.h */,
+				CFCE54251AA87029005A419A /* NewsTableViewController.m */,
+				CFCE54271AA8857E005A419A /* NewsDetailViewController.m */,
+				CFCE54291AA88592005A419A /* NewsDetailViewController.h */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		49C3590D1AA892F80064DDB0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CF86A5021AA83DF000E1BB51 /* Main.storyboard */,
+				CFCE541C1AA86BC6005A419A /* NewsCell.xib */,
+				CFCE54211AA86DC8005A419A /* NewsTableCell.h */,
+				CFCE54221AA86DE3005A419A /* NewsTableCell.m */,
+				CF86A5071AA83DF000E1BB51 /* LaunchScreen.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		49C3590E1AA893570064DDB0 /* HTTPClient */ = {
+			isa = PBXGroup;
+			children = (
+				49C359121AA893B70064DDB0 /* HttpRequestConsts.h */,
+				49C359131AA893B70064DDB0 /* HttpClient.h */,
+				49C359141AA893B70064DDB0 /* HttpClient.m */,
+				49C359151AA893B70064DDB0 /* HTTPRequestManager.h */,
+				49C359161AA893B70064DDB0 /* HTTPRequestManager.m */,
+			);
+			name = HTTPClient;
+			sourceTree = "<group>";
+		};
 		C1A85E0FEF71ADB2C881CDEC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,19 +168,17 @@
 		CF86A4F71AA83DF000E1BB51 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				49C359231AA8BE800064DDB0 /* UIViewController+ScreenSize.h */,
+				49C359241AA8BE800064DDB0 /* UIViewController+ScreenSize.m */,
+				49C359221AA8BD510064DDB0 /* SwitchedToPageOfIndexDelegate.h */,
+				49C3590E1AA893570064DDB0 /* HTTPClient */,
+				49C3590D1AA892F80064DDB0 /* Views */,
+				49C359081AA892BD0064DDB0 /* Modals */,
+				49C359091AA892C60064DDB0 /* ViewControllers */,
 				CF86A4FC1AA83DF000E1BB51 /* AppDelegate.h */,
 				CF86A4FD1AA83DF000E1BB51 /* AppDelegate.m */,
-				CF86A5021AA83DF000E1BB51 /* Main.storyboard */,
-				CFCE541C1AA86BC6005A419A /* NewsCell.xib */,
-				CFCE54211AA86DC8005A419A /* NewsTableCell.h */,
-				CFCE54221AA86DE3005A419A /* NewsTableCell.m */,
 				CF86A5051AA83DF000E1BB51 /* Images.xcassets */,
-				CF86A5071AA83DF000E1BB51 /* LaunchScreen.xib */,
 				CF86A4F81AA83DF000E1BB51 /* Supporting Files */,
-				CFCE54241AA87016005A419A /* NewsTableViewController.h */,
-				CFCE54251AA87029005A419A /* NewsTableViewController.m */,
-				CFCE54271AA8857E005A419A /* NewsDetailViewController.m */,
-				CFCE54291AA88592005A419A /* NewsDetailViewController.h */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -294,8 +355,13 @@
 			files = (
 				CFCE54261AA87029005A419A /* NewsTableViewController.m in Sources */,
 				CFCE54281AA8857E005A419A /* NewsDetailViewController.m in Sources */,
+				49C3590C1AA892E50064DDB0 /* News.m in Sources */,
+				49C359251AA8BE800064DDB0 /* UIViewController+ScreenSize.m in Sources */,
+				49C359181AA893B70064DDB0 /* HTTPRequestManager.m in Sources */,
 				CF86A4FE1AA83DF000E1BB51 /* AppDelegate.m in Sources */,
+				49C359211AA8BC9F0064DDB0 /* RootViewController.m in Sources */,
 				CF86A4FB1AA83DF000E1BB51 /* main.m in Sources */,
+				49C359171AA893B70064DDB0 /* HttpClient.m in Sources */,
 				CFCE54231AA86DE3005A419A /* NewsTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
