@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		494CEAB11AA8CEA200AD4E1A /* CategoryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 494CEAB01AA8CEA200AD4E1A /* CategoryButton.m */; };
+		49AD4B101AA8DC0A00E929C4 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AD4B0F1AA8DC0A00E929C4 /* NewsDetailViewController.m */; };
 		49C3590C1AA892E50064DDB0 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C3590B1AA892E50064DDB0 /* News.m */; };
 		49C359171AA893B70064DDB0 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C359141AA893B70064DDB0 /* HttpClient.m */; };
 		49C359181AA893B70064DDB0 /* HTTPRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C359161AA893B70064DDB0 /* HTTPRequestManager.m */; };
@@ -23,7 +24,6 @@
 		CFCE541D1AA86BC6005A419A /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFCE541C1AA86BC6005A419A /* NewsCell.xib */; };
 		CFCE54231AA86DE3005A419A /* NewsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCE54221AA86DE3005A419A /* NewsTableCell.m */; };
 		CFCE54261AA87029005A419A /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCE54251AA87029005A419A /* NewsTableViewController.m */; };
-		CFCE54281AA8857E005A419A /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCE54271AA8857E005A419A /* NewsDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +40,7 @@
 		1B14694B55610B1D626AD062 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		494CEAAF1AA8CEA200AD4E1A /* CategoryButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryButton.h; sourceTree = "<group>"; };
 		494CEAB01AA8CEA200AD4E1A /* CategoryButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryButton.m; sourceTree = "<group>"; };
+		49AD4B0F1AA8DC0A00E929C4 /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
 		49C3590A1AA892E50064DDB0 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
 		49C3590B1AA892E50064DDB0 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
 		49C359121AA893B70064DDB0 /* HttpRequestConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequestConsts.h; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		CFCE54221AA86DE3005A419A /* NewsTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableCell.m; sourceTree = "<group>"; };
 		CFCE54241AA87016005A419A /* NewsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsTableViewController.h; sourceTree = "<group>"; };
 		CFCE54251AA87029005A419A /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewController.m; sourceTree = "<group>"; };
-		CFCE54271AA8857E005A419A /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
 		CFCE54291AA88592005A419A /* NewsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
 		EBEBED0F3A0E63D30EF09DE7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,7 +110,7 @@
 				CFCE54241AA87016005A419A /* NewsTableViewController.h */,
 				CFCE54251AA87029005A419A /* NewsTableViewController.m */,
 				CFCE54291AA88592005A419A /* NewsDetailViewController.h */,
-				CFCE54271AA8857E005A419A /* NewsDetailViewController.m */,
+				49AD4B0F1AA8DC0A00E929C4 /* NewsDetailViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -359,8 +359,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				494CEAB11AA8CEA200AD4E1A /* CategoryButton.m in Sources */,
+				49AD4B101AA8DC0A00E929C4 /* NewsDetailViewController.m in Sources */,
 				CFCE54261AA87029005A419A /* NewsTableViewController.m in Sources */,
-				CFCE54281AA8857E005A419A /* NewsDetailViewController.m in Sources */,
 				49C3590C1AA892E50064DDB0 /* News.m in Sources */,
 				49C359251AA8BE800064DDB0 /* UIViewController+ScreenSize.m in Sources */,
 				49C359181AA893B70064DDB0 /* HTTPRequestManager.m in Sources */,

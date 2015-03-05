@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "News.h"
+#import "HttpClient.h"
+#import "UIView+Toast.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "UIViewController+ScreenSize.h"
 
-@interface NewsDetailViewController : UIViewController
+@interface NewsDetailViewController : UIViewController<UIScrollViewDelegate>
 
 @property (strong, nonatomic) News* news;
 
@@ -19,5 +23,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
 
+@property (weak, nonatomic) IBOutlet UITextView *contentTextField;
+
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
 
 @end
