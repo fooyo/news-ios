@@ -47,16 +47,19 @@
                   failure:(void (^)(NSInteger statusCode, NSError *error))failure{
     
     HTTPRequestManager *manager = [HTTPRequestManager manager];
-    
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+
     NSString* requestURL = [REQUEST_DOMAIN stringByAppendingString:GET_NEWS];
     
     if (category != nil) {
-        requestURL = [requestURL stringByAppendingString:category];
+        requestURL = [NSString stringWithFormat:@"%@%@/%@", REQUEST_DOMAIN, requestURL, [category lowercaseString]];
     }
     
     NSMutableDictionary* parameters = [[NSMutableDictionary alloc] init];
     if (offset != nil) {
         [parameters setObject: offset forKey:@"offset"];
+    } else{
+        parameters = nil;
     }
     
     [manager GET:requestURL parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
