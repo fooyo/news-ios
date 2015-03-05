@@ -29,15 +29,19 @@
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.layer.borderWidth = 0;
     self.titleLabel.font = [UIFont systemFontOfSize: 20];
+    self.titleLabel.contentMode = UIViewContentModeCenter;
+    self.backgroundColor = [UIColor colorFromRGB: 0x446cb3];
 }
 
 - (void)setSelected:(BOOL)selected{
     
     [super setSelected: selected];
     if (selected) {
-        [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self setTitleColor:[UIColor colorFromRGB: 0x446cb3] forState:UIControlStateNormal];
+        self.backgroundColor = [UIColor whiteColor];
     } else{
-        [self setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+        [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        self.backgroundColor = [UIColor colorFromRGB: 0x446cb3];
     }
 }
 

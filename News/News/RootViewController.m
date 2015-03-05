@@ -29,6 +29,8 @@
 {
     [super viewDidLoad];
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     [self.view makeToastActivity];
     
     [[HttpClient sharedInstance] getCategoriesSuccess:^(id responseObject) {
