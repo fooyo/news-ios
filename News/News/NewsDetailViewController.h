@@ -13,4 +13,11 @@
 
 @property (strong, nonatomic) News* news;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *slideShowScrollView;
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
+
+
 @end
