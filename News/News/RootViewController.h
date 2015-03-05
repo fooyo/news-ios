@@ -11,10 +11,12 @@
 #import "NewsTableViewController.h"
 #import <UIKit/UIKit.h>
 #import "HttpClient.h"
+#import "UIView+Toast.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface RootViewController : UIViewController <UIPageViewControllerDataSource, SwitchedToPageDelegate>
 
-@property (strong, nonatomic) NSArray *pageImages;
+@property (strong, nonatomic) NSArray *categories;
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;

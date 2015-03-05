@@ -7,7 +7,6 @@
         <!--Item 2-->
         <scene sceneID="YDf-qO-mCl">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r5L-JA-6Xl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="C1g-VL-jgo" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qzt-yn-f6j"/>
@@ -42,6 +41,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="thm-w9-3bZ"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r5L-JA-6Xl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-439" y="1400"/>
         </scene>
@@ -56,7 +56,7 @@
         <!--News Table View Controller-->
         <scene sceneID="xZY-qQ-KBJ">
             <objects>
-                <viewController id="Yws-jK-BK1" customClass="NewsTableViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yws-jK-BK1" customClass="NewsTableViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LGV-fV-xLD"/>
                         <viewControllerLayoutGuide type="bottom" id="Lec-Nh-XZv"/>
@@ -90,7 +90,7 @@
         <!--News Detail View Controller-->
         <scene sceneID="5kY-ad-6VC">
             <objects>
-                <viewController id="AFr-dD-Mog" customClass="NewsDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AFr-dD-Mog" customClass="NewsDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lm6-md-mf1"/>
                         <viewControllerLayoutGuide type="bottom" id="wZH-AT-Usy"/>

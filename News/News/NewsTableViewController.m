@@ -23,6 +23,11 @@
     newsTable.dataSource = self;
 }
 
+- (void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.delegate contentViewControllerDidSwitchToPageOfIndex:(int)self.pageIndex];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -42,7 +47,7 @@
         cell = [nib objectAtIndex:0];
     }
     
-    cell.titleLabel.text = @"title";//[tableData objectAtIndex:indexPath.row];
+    cell.titleLabel.text = self.category;
     cell.sourceLabel.text = @"source";
     return cell;
 }
@@ -56,7 +61,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    NewsDetailViewController *newsDetailViewController = [[NewsDetailViewController alloc] initWithNibName:@"NewsDetailViewController" bundle:nil];
+    NewsDetailViewController *newsDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"NewsDetailViewController"];
     [self.navigationController pushViewController:newsDetailViewController animated:YES];
     
 }
