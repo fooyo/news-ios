@@ -56,12 +56,18 @@
         self.isLoadingNextPage = NO;
         [self.view hideToastActivity];
         
-        for (NSDictionary* newsDict in [responseObject objectForKey:@"news"]) {
+        NSDictionary* newsDicts = [responseObject objectForKey:@"news"];
+                                               
+        for (NSDictionary* newsDict in newsDicts) {
             News* news = [News convertFromNewsDictionaryToNewsObject: newsDict];
             [self.newsArray addObject: news];
         }
         self.offSet = (int)[(NSString*)[responseObject objectForKey:@"offset"] integerValue];
         [self.tableView reloadData];
+                                               
+        if (newsDicts.count == 0) {
+            [self.view makeToast:@"There isn't any news from this category yet. Please try again later" duration:5 position:@"bottom"];
+        }
         
     } failure:^(NSInteger statusCode, NSError *error) {
         

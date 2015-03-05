@@ -49,10 +49,10 @@
     HTTPRequestManager *manager = [HTTPRequestManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
 
-    NSString* requestURL = [REQUEST_DOMAIN stringByAppendingString:GET_NEWS];
+    NSString* requestURL;
     
     if (category != nil) {
-        requestURL = [NSString stringWithFormat:@"%@%@/%@", REQUEST_DOMAIN, requestURL, [category lowercaseString]];
+        requestURL = [NSString stringWithFormat:@"%@%@/%@", REQUEST_DOMAIN, GET_NEWS, [category lowercaseString]];
     }
     
     NSMutableDictionary* parameters = [[NSMutableDictionary alloc] init];

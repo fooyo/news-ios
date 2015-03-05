@@ -175,7 +175,6 @@
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
 {
     return 0;
-    //return [self.pageTitles count];
 }
 
 // Default page
@@ -188,10 +187,26 @@
 
 - (void) contentViewControllerDidSwitchToPageOfIndex:(int)index{
     self.currentPageIndex = index;
+    
+    UIButton* buttonClicked;
     for (int i = 0 ; i < self.categoryButtons.count; i++) {
         UIButton* button = [self.categoryButtons objectAtIndex: i];
         [button setSelected: i == index];
+        if (i == index) {
+            buttonClicked = button;
+        }
     }
+    
+    CGPoint scrollPoint = CGPointZero;
+    if (index >= 1) {
+        scrollPoint = CGPointMake(buttonClicked.frame.origin.x - (self.scrollView.frame.size.width / 2 - buttonClicked.frame.size.width / 2),
+                                          self.scrollView.contentOffset.y);
+        
+    } else{
+        scrollPoint = CGPointMake(buttonClicked.frame.origin.x,
+                                  self.scrollView.contentOffset.y);
+    }
+    [self.scrollView setContentOffset:scrollPoint animated:YES];
 }
 
 #pragma mark - Button Click Events

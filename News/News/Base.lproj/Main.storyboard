@@ -220,10 +220,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wih-Vd-Xrm">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
                                 <color key="backgroundColor" red="0.24705882352941178" green="0.33333333333333331" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="oyy-nY-WMt"/>
+                                    <constraint firstAttribute="height" constant="69" id="oyy-nY-WMt"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
