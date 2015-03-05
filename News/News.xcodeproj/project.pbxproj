@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		494CEAB11AA8CEA200AD4E1A /* CategoryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 494CEAB01AA8CEA200AD4E1A /* CategoryButton.m */; };
 		49C3590C1AA892E50064DDB0 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C3590B1AA892E50064DDB0 /* News.m */; };
 		49C359171AA893B70064DDB0 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C359141AA893B70064DDB0 /* HttpClient.m */; };
 		49C359181AA893B70064DDB0 /* HTTPRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C359161AA893B70064DDB0 /* HTTPRequestManager.m */; };
@@ -37,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		1B14694B55610B1D626AD062 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		494CEAAF1AA8CEA200AD4E1A /* CategoryButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryButton.h; sourceTree = "<group>"; };
+		494CEAB01AA8CEA200AD4E1A /* CategoryButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryButton.m; sourceTree = "<group>"; };
 		49C3590A1AA892E50064DDB0 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
 		49C3590B1AA892E50064DDB0 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
 		49C359121AA893B70064DDB0 /* HttpRequestConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequestConsts.h; sourceTree = "<group>"; };
@@ -106,8 +109,8 @@
 				49C359201AA8BC9F0064DDB0 /* RootViewController.m */,
 				CFCE54241AA87016005A419A /* NewsTableViewController.h */,
 				CFCE54251AA87029005A419A /* NewsTableViewController.m */,
-				CFCE54271AA8857E005A419A /* NewsDetailViewController.m */,
 				CFCE54291AA88592005A419A /* NewsDetailViewController.h */,
+				CFCE54271AA8857E005A419A /* NewsDetailViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -120,6 +123,8 @@
 				CFCE54211AA86DC8005A419A /* NewsTableCell.h */,
 				CFCE54221AA86DE3005A419A /* NewsTableCell.m */,
 				CF86A5071AA83DF000E1BB51 /* LaunchScreen.xib */,
+				494CEAAF1AA8CEA200AD4E1A /* CategoryButton.h */,
+				494CEAB01AA8CEA200AD4E1A /* CategoryButton.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -353,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				494CEAB11AA8CEA200AD4E1A /* CategoryButton.m in Sources */,
 				CFCE54261AA87029005A419A /* NewsTableViewController.m in Sources */,
 				CFCE54281AA8857E005A419A /* NewsDetailViewController.m in Sources */,
 				49C3590C1AA892E50064DDB0 /* News.m in Sources */,

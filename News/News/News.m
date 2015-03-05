@@ -31,7 +31,7 @@
     News* news = [[News alloc] initWithTitle:[dict objectForKey:@"title"]
                                      andText:[dict objectForKey:@"text"]
                                  andCategory:[dict objectForKey:@"category"]
-                                     andTime:[dict objectForKey:@"title"]
+                                     andTime:[dict objectForKey:@"time"]
                                    andImages:[dict objectForKey:@"images"]];
     return news;
 }

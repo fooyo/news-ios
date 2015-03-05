@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "News.h"
 
 @interface NewsDetailViewController : UIViewController
+
+@property (strong, nonatomic) News* news;
 
 @end

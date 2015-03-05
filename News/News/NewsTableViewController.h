@@ -9,8 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "NewsTableCell.h"
 #import "SwitchedToPageOfIndexDelegate.h"
+#import "News.h"
+#import "HttpClient.h"
+#import "UIView+Toast.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface NewsTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) NSString* category;
 @property (weak, nonatomic) IBOutlet UITableView *newsTable;

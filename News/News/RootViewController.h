@@ -13,6 +13,7 @@
 #import "HttpClient.h"
 #import "UIView+Toast.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "CategoryButton.h"
 
 @interface RootViewController : UIViewController <UIPageViewControllerDataSource, SwitchedToPageDelegate>
 

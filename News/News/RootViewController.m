@@ -12,6 +12,7 @@
 @interface RootViewController ()
 
 @property (nonatomic) int currentPageIndex;
+@property (strong, nonatomic) NSMutableArray* categoryButtons;
 
 @end
 
@@ -59,28 +60,31 @@
 
 - (void) renderViewAfterCategoryRetrived{
     // Render scrollView:
+    self.categoryButtons = [[NSMutableArray alloc] init];
     
     CGFloat sumOfCategoryButtonWidths = 0;
-    CGFloat buttonHeight = self.scrollView.frame.size.height;
+    CGFloat buttonHeight = self.scrollView.frame.size.height-20;
     
     for (int i = 0; i < self.categories.count; i++) {
         NSString* category = [self.categories objectAtIndex: i];
         CGFloat buttonWidth = category.length * PIXEL_PER_CHAR;
         
         // Add button
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        CategoryButton *button = [[CategoryButton alloc] initWithFrame:CGRectMake(sumOfCategoryButtonWidths,
+                                                                                 0,
+                                                                                 buttonWidth,
+                                                                                 buttonHeight)];
         button.backgroundColor = [UIColor clearColor];
-        button.frame = CGRectMake(sumOfCategoryButtonWidths,
-                                  0,
-                                  buttonWidth,
-                                  buttonHeight);
         [self.scrollView addSubview:button];
         button.tag = i;
+        [button setTitle:category forState:UIControlStateNormal];
         [button addTarget:self
                    action:@selector(categoryButtonClicked:)
          forControlEvents:UIControlEventTouchUpInside];
         
-        sumOfCategoryButtonWidths += buttonWidth;
+        sumOfCategoryButtonWidths += buttonWidth + 20;
+        
+        [self.categoryButtons addObject: button];
     }
     
     self.scrollView.contentSize =CGSizeMake(sumOfCategoryButtonWidths, buttonHeight);
@@ -179,18 +183,27 @@
 
 - (void) contentViewControllerDidSwitchToPageOfIndex:(int)index{
     self.currentPageIndex = index;
+    for (int i = 0 ; i < self.categoryButtons.count; i++) {
+        UIButton* button = [self.categoryButtons objectAtIndex: i];
+        [button setSelected: i == index];
+    }
 }
 
 #pragma mark - Button Click Events
 
 - (void)categoryButtonClicked:(UIButton*)sender{
+    int destinationPageIndex = (int)sender.tag;
     if (sender.tag == self.currentPageIndex){
         return;
     }
 
-    CGPoint scrollPoint = CGPointMake(self.view.frame.size.width * sender.tag, 0);
-    [self.scrollView setContentOffset:scrollPoint animated:YES];
-    [self contentViewControllerDidSwitchToPageOfIndex:(int)sender.tag];
+    NewsTableViewController* vc = [self viewControllerAtIndex: destinationPageIndex];
+    UIPageViewControllerNavigationDirection direction = destinationPageIndex > self.currentPageIndex ? UIPageViewControllerNavigationDirectionForward : UIPageViewControllerNavigationDirectionReverse;
+
+    __weak __typeof(self)weakSelf = self;
+    [self.pageViewController setViewControllers:@[vc] direction:direction animated:YES completion:^(BOOL finished) {
+        [weakSelf contentViewControllerDidSwitchToPageOfIndex:(int)sender.tag];
+    }];
 }
 
 @end
