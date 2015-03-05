@@ -30,7 +30,7 @@
                      failure:(void (^)(NSInteger statusCode, NSError *error))failure{
     
     HTTPRequestManager *manager = [HTTPRequestManager manager];
-    
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     [manager GET:[REQUEST_DOMAIN stringByAppendingString:GET_CATEGORIES] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         success(responseObject);
@@ -38,7 +38,6 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
         failure(operation.response.statusCode, error);
-        
     }];
 }
 

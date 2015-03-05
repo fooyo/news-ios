@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Shaohuan Li. All rights reserved.
 //
 
-#define PIXEL_PER_CHAR 10
+#define PIXEL_PER_CHAR 15
 #import "RootViewController.h"
 
 @interface RootViewController ()
@@ -37,7 +37,7 @@
             [categoriesMutableArray addObject: category];
         }
         self.categories = [NSArray arrayWithArray: categoriesMutableArray];
-        //[self renderViewAfterCategoryRetrived];
+        [self renderViewAfterCategoryRetrived];
         [self.view hideToastActivity];
     } failure:^(NSInteger statusCode, NSError *error) {
         [self.view makeToast:@"Sorry, network condition is not good. Please try agian later."
@@ -46,8 +46,8 @@
         [self.view hideToastActivity];
     }];
     
-    self.categories = @[@"Corgi", @"Shizi", @"Squirral"];
-    [self renderViewAfterCategoryRetrived];
+    //self.categories = @[@"Corgi", @"Shizi", @"Squirral"];
+    //[self renderViewAfterCategoryRetrived];
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,7 +82,7 @@
                    action:@selector(categoryButtonClicked:)
          forControlEvents:UIControlEventTouchUpInside];
         
-        sumOfCategoryButtonWidths += buttonWidth + 20;
+        sumOfCategoryButtonWidths += buttonWidth;
         
         [self.categoryButtons addObject: button];
     }
