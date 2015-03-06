@@ -121,7 +121,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     NewsDetailViewController *newsDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"NewsDetailViewController"];
+    
     newsDetailViewController.news = [self.newsArray objectAtIndex: indexPath.row];
+    newsDetailViewController.category = self.category;
+    
     [self.navigationController pushViewController:newsDetailViewController animated:YES];
 }
 

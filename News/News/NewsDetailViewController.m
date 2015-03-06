@@ -34,7 +34,7 @@
 - (void) renderTexts{
     self.titleLabel.text = self.news.title;
     self.timeLabel.text = self.news.time;
-    self.categoryLabel.text = self.news.category;
+    self.categoryLabel.text = self.category;
     self.contentTextField.text = self.news.text;
 }
 

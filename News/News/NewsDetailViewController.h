@@ -15,6 +15,7 @@
 
 @interface NewsDetailViewController : UIViewController<UIScrollViewDelegate>
 
+@property (strong, nonatomic) NSString* category;
 @property (strong, nonatomic) News* news;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *slideShowScrollView;
