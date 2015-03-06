@@ -45,9 +45,15 @@
 
 - (void)loadNewsDataFromServer{
     NSNumber* offset = self.offSet == INVALID_OFFSET ? nil : [NSNumber numberWithInt: self.offSet];
+
     
-    //[self.view hideToastActivity];
+    if (self.isLoadingNextPage) {
+        return;
+    }
+    
+    [self.view hideToastActivity];
     [self.view makeToastActivity];
+    
     self.isLoadingNextPage = YES;
     
     [[HttpClient sharedInstance] getNewsWithOffset: offset

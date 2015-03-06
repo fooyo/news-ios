@@ -45,7 +45,7 @@
         [self renderViewAfterCategoryRetrived];
         [self.view hideToastActivity];
     } failure:^(NSInteger statusCode, NSError *error) {
-        [self.view makeToast:@"Sorry, network condition is not good. Please try agian later."
+        [self.view makeToast:@"Sorry, network condition is not good. Please try again later."
                     duration:5
                     position:@"bottom"];
         [self.view hideToastActivity];
